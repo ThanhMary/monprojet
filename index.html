@@ -44,11 +44,17 @@
 
 	<FORM method="post" action="formulaireReservation.html">
 
-	<div class="col-sm6 col-md-3">
-         <ul id="menu-accordeon">
+	<div class="col-sm-6 col-md-3">
+    <ul id="menu-accordeon">
 			<li><a href="#">Arrivée</a>
 				<ul>
-					<li><input type="date" name="Arrivée"></li>
+					<!-- <li><input type="date" name="Arrivée"></li> -->
+          <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
 				</ul>
 			</li>
 		</ul>
@@ -69,8 +75,12 @@
 			<ul id="menu-accordeon">
 				<li><a href="#">Type de chambre</a>
 					<ul>
-						<li><Select><option value="Chambre">Simple</option></li>
-						<li><option value="Chambre">Double</option></li></Select>
+						<li>
+              <select class="form-control">
+                <option value="Chambre">Simple</option>
+                <option value="Chambre">Double</option>
+              </Select>
+            </li>
 					</ul>
 				</li>
 			</ul>
