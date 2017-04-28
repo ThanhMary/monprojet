@@ -1,0 +1,31 @@
+body
+{
+background-color:#823838;
+background-image: url("image/logo1.jpg"); 
+background-position:right top;
+background-repeat:no-repeat; 
+}
+
+
+h1 
+{
+font-size : 200%; 
+font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+color : white; 
+text-align: center;
+}
+h2 {
+font-size : 150%; 
+font-family : Verdana, Arial, Helvetica, Geneva, sans-serif; 
+color : white;
+padding-left:15px;
+text-align: center;
+}
+h3 {
+font-size : 100%; 
+font-family : Verdana, Arial, Helvetica, Geneva, sans-serif; 
+color : white;
+padding-left:15px;
+text-align: left;
+}
+
