@@ -1,3 +1,11 @@
+.parent {
+ display: flex;
+ flex-flow: column; /* afficher les éléments en colonne */
+}
+
+.children {
+ order: 1; /* modifie l'ordre des éléments */
+}
 .title{
 	color: red;
 	text-align: center;

@@ -7,44 +7,7 @@
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
-+(function () {
-    var provasNaoIdentificadas = angular.module("provasNaoIdentificadas", [
-        'restClient'
-    ]);
 
-    provasNaoIdentificadas.controller("accordionCtrl", ["$scope", "ListaInscricao", function($scope, ListaInscricao){
-        $scope.inscricao = {
-            "Secretaria": ""
-        };
-
-        $("accordion-list").on("hidden.bs.collapse shown.bs.collapse", ".collapse", function (event) {
-            if ($(this).hasClass("in")) {
-                $(this).prev().find(".glyphicon").removeClass("glyphicon-plus glyphicon-minus").addClass("glyphicon-minus");
-                $(this).prev().find("span.pull-right.text-muted").removeClass("expandir fechar").addClass("fechar");
-            } else {
-                $(this).prev().find(".glyphicon").removeClass("glyphicon-plus glyphicon-minus").addClass("glyphicon-plus");
-                $(this).prev().find("span.pull-right.text-muted").removeClass("expandir fechar").addClass("expandir");
-            }
-
-            console.log(1, this, event); // i have detected the problem by interpreting 
-        });
-
-        ListaInscricao.get({"id": 1}, function(data){
-            if (data.Sucesso) {
-                $scope.inscricao = data.Dados;
-            } else {
-                // toastr
-            }
-        });
-    }]);
-
-    provasNaoIdentificadas.directive('accordionList', function() {
-        return {
-            "restrict": "E",
-            "templateUrl": "partials/accordion.html"
-        };
-    });
-})();
 +function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.')

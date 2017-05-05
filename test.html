@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<title> HOTEL PANORAMA </title>
+
+			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+			<link rel="stylesheet" type="text/css" href="css/datepicker.css">
+			<link rel="stylesheet" type="text/css" href="css/styleHotel.css">
+
+
+			<script src="js/jquery-3.2.1.js"></script>
+			<script src="js/bootstrap.js"></script>
+			<script src="js/bootstrap-datepicker.js"></script>
+      <script src="js/myscript.js"></script>
+
+  </head>
+
+  <body>
+
+ 
+  <input id="text" type="text" size="60" value="Vous n'avez pas le focus !" />
+
+<script>
+    var text = document.getElementById('text');
+  
+    text.addEventListener('focus', function(e) {
+        e.target.value = "Vous avez le focus !";
+    });
+
+    text.addEventListener('blur', function(e) {
+        e.target.value = "Vous n'avez pas le focus !";
+    });
+</script>
+  <input id="text" type="text" />
+
+<script>
+    var text = document.getElementById('text');
+
+    text.disabled = true;
+</script>
+
+<label><input type="radio" name="check" value="1" /> Case n°1</label><br />
+<label><input type="radio" name="check" value="2" /> Case n°2</label><br />
+<label><input type="radio" name="check" value="3" /> Case n°3</label><br />
+<label><input type="radio" name="check" value="4" /> Case n°4</label>
+<br /><br />
+<input type="button" value="Afficher la case cochée" onclick="check();" />
+
+<script>
+    function check() {
+        var inputs = document.getElementsByTagName('input'),
+            inputsLength = inputs.length;
+
+        for (var i = 0; i < inputsLength; i++) {
+            if (inputs[i].type === 'radio' && inputs[i].checked) {
+                alert('La case cochée est la n°' + inputs[i].value);
+            }
+        }
+    }
+</script>
+  
+  </body>
